@@ -795,6 +795,22 @@ ENDM
 	pop bc
 	ret
 
+.StartRunning:
+	push bc
+	ld a, PLAYER_RUN
+	ld [wPlayerState], a
+	call UpdatePlayerSprite
+	pop bc
+	ret
+
+.StartWalking:
+	push bc
+	ld a, PLAYER_NORMAL
+	ld [wPlayerState], a
+	call UpdatePlayerSprite
+	pop bc
+	ret
+
 CheckStandingOnIce::
 	ld a, [wPlayerTurningDirection]
 	cp 0
