@@ -104,3 +104,5 @@ OverworldSprites:
 	overworld_sprite ChrisSkateSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite KrisSkateSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite PlaceholderSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
+	overworld_sprite ChrisRunSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite KrisRunSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
