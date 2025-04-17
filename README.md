@@ -2,6 +2,8 @@ Fork I made to see how hard it was to add running shoes to the amazing 97 Reforg
 
 --
 
+Begin original README:
+
 # Pokémon Gold & Silver 97 Reforged
 
 
