@@ -95,7 +95,7 @@ NameRival:
 
 .default
 	db "SILVER@"
-	
+
 NameMom:
 	ld b, NAME_MOM
 	ld de, wMomsName
@@ -106,7 +106,7 @@ NameMom:
 	call InitName
 	ret
 	
-	.default
+.default
 	db "MOMMY@"
 
 NameRater:
