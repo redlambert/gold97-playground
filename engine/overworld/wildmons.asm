@@ -219,6 +219,7 @@ ApplyMusicEffectOnEncounterRate::
 	ld a, [wMapMusic]
 	cp MUSIC_POKEMON_MARCH
 	jr z, .double
+
 	cp MUSIC_RUINS_OF_ALPH_RADIO
 	jr z, .double
 	cp MUSIC_POKEMON_LULLABY
@@ -382,20 +383,14 @@ LoadWildMonDataPointer:
 	jr z, _WaterWildmonLookup
 
 _GrassWildmonLookup:
-	ld hl, wSwarmFlags ; check if the flag is set
-	bit SWARMFLAGS_ALT_SWARM_F, [hl]
-	jr z, .check_normal_flag ;if not, then check for the alt swarm flag too
-	ld hl, SwarmGrassWildMonsAlt
-	jr .cont 
-.check_normal_flag
-	ld hl, wDailyFlags1
-	bit DAILYFLAGS_SWARM_F, [hl]
-	jr z, .cont ; if not, then skip generating a swarm
+        ld hl, wDailyFlags1 ; check if the flag is set
+        bit DAILYFLAGS1_SWARM_F, [hl]
+        jr z, .no_swarm ; if not, then skip generating a swarm
 	ld hl, SwarmGrassWildMons
-.cont
 	ld bc, GRASS_WILDDATA_LENGTH
 	call _SwarmWildmonCheck
 	ret c
+.no_swarm
 	ld hl, JohtoGrassWildMons
 	ld de, KantoGrassWildMons
 	call _JohtoWildmonCheck
