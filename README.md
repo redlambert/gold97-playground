@@ -1,3 +1,6 @@
+Fork I made to see how hard it was to add running shoes to the amazing 97 Reforged. It worked! Next goal is trying out the tutorial for adding individual pokemon icons in the menu (instead of the generic ones.)
+
+
 # Pokémon Gold & Silver 97 Reforged
 
 
