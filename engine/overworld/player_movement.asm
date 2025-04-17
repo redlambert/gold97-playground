@@ -333,25 +333,6 @@ DoPlayerMovement::
 	xor a
 	ret
 
-.HandleWalkAndRun
-	ld a, [wWalkingDirection]
-	cp STANDING
-	jr z, .ensurewalk
-	ldh a, [hJoypadDown]
-	and B_BUTTON
-	cp B_BUTTON
-	jr nz, .ensurewalk
-	ld a, [wPlayerState]
-	cp PLAYER_RUN
-	call nz, .StartRunning
-	jr .fast
-
-.ensurewalk
-	ld a, [wPlayerState]
-	cp PLAYER_NORMAL
-	call nz, .StartWalking
-	jr .walk
-
 .TrySurf:
 	call .CheckSurfPerms
 	ld [wd040], a
@@ -372,6 +353,25 @@ DoPlayerMovement::
 	call .DoStep
 	scf
 	ret
+
+.HandleWalkAndRun
+	ld a, [wWalkingDirection]
+	cp STANDING
+	jr z, .ensurewalk
+	ldh a, [hJoypadDown]
+	and B_BUTTON
+	cp B_BUTTON
+	jr nz, .ensurewalk
+	ld a, [wPlayerState]
+	cp PLAYER_RUN
+	call nz, .StartRunning
+	jr .fast
+
+.ensurewalk
+	ld a, [wPlayerState]
+	cp PLAYER_NORMAL
+	call nz, .StartWalking
+	jr .walk
 
 .ExitWater:
 	call .GetOutOfWater
