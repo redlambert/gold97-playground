@@ -100,8 +100,8 @@
 	const SPRITE_CHRIS_SKATE
 	const SPRITE_KRIS_SKATE
 	const SPRITE_PLACEHOLDER
-	const SPRITE_KRIS_RUN ; 67
-	const SPRITE_CHRIS_RUN ; 68
+	const SPRITE_CHRIS_RUN ; 67
+	const SPRITE_KRIS_RUN ; 68
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
