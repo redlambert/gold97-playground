@@ -95,13 +95,13 @@
 	const SPRITE_SILVER_TROPHY ; 5f
 	const SPRITE_KRIS ; 60
 	const SPRITE_KRIS_BIKE ; 61
-	const SPRITE_KRIS_RUN ; 62
-	const SPRITE_CHRIS_RUN ; 63
 	const SPRITE_OLD_AMBER
 	const SPRITE_SURGE
 	const SPRITE_CHRIS_SKATE
 	const SPRITE_KRIS_SKATE
 	const SPRITE_PLACEHOLDER
+	const SPRITE_KRIS_RUN ; 67
+	const SPRITE_CHRIS_RUN ; 68
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
