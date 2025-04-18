@@ -103,8 +103,8 @@ SurgeSpriteGFX::               INCBIN "gfx/sprites/surge.2bpp"
 
 SECTION "Sprites 3", ROMX
 
-ChrisSkateSpriteGFX::           INCBIN "gfx/sprites/chris_skate.2bpp"
-KrisSkateSpriteGFX::            INCBIN "gfx/sprites/kris_skate.2bpp"
-PlaceholderSpriteGFX::          INCBIN "gfx/sprites/placeholder.2bpp"
-ChrisRunSpriteGFX::             INCBIN "gfx/sprites/chris_run.2bpp"
-KrisRunSpriteGFX::              INCBIN "gfx/sprites/kris_run.2bpp"
+ChrisSkateSpriteGFX::          INCBIN "gfx/sprites/chris_skate.2bpp"
+KrisSkateSpriteGFX::           INCBIN "gfx/sprites/kris_skate.2bpp"
+PlaceholderSpriteGFX::         INCBIN "gfx/sprites/placeholder.2bpp"
+ChrisRunSpriteGFX::            INCBIN "gfx/sprites/chris_run.2bpp"
+KrisRunSpriteGFX::             INCBIN "gfx/sprites/kris_run.2bpp"
