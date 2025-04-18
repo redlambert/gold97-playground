@@ -291,7 +291,7 @@ PlayerEvents:
 	jr nz, .ok2
 	ld a, PLAYER_NORMAL
 	ld [wPlayerState], a
-	farcall _UpdateSprites
+	farcall ReplaceKrisSprite
 
 .ok2
 	scf
