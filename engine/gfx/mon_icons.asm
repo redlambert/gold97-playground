@@ -3,36 +3,36 @@ LoadOverworldMonIcon:
 	ld b, d
 	call ReadMonMenuIcon
 	ld [wCurIcon], a
-+	cp ICON_UNOWN
-+	jr nz, .not_unown
-+
-+	; Is it a Breedmon?
-+	ld a, b
-+	and a
-+	jr z, .not_breedmon
-+	
-+	ld hl, wBreedMon1DVs
-+	; Check which Breedmon we're using
-+	dec a
-+	jr z, .get_unown_letter
-+	ld hl, wBreedMon2DVs
-+.get_unown_letter
-+	predef GetUnownLetter
-+	ld a, [wUnownLetter]
-+	ld l, a
-+	ld h, 0
-+	add hl, hl
-+	ld de, UnownIconPointers
-+	add hl, de
-+	ld a, [hli]
-+	ld e, a
-+	ld d, [hl]
-+	lb bc, BANK("Unown Icons"), 8
-+	ret
-+
-+.not_breedmon
-+	ld a, [wCurIcon]
-+.not_unown
+	cp ICON_UNOWN
+	jr nz, .not_unown
+
+	; Is it a Breedmon?
+	ld a, b
+	and a
+	jr z, .not_breedmon
+	
+	ld hl, wBreedMon1DVs
+	; Check which Breedmon we're using
+	dec a
+	jr z, .get_unown_letter
+	ld hl, wBreedMon2DVs
+.get_unown_letter
+	predef GetUnownLetter
+	ld a, [wUnownLetter]
+	ld l, a
+	ld h, 0
+	add hl, hl
+	ld de, UnownIconPointers
+	add hl, de
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
+	lb bc, BANK("Unown Icons"), 8
+	ret
+
+.not_breedmon
+	ld a, [wCurIcon]
+.not_unown
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -43,39 +43,39 @@ LoadOverworldMonIcon:
 	ld d, [hl]
 	jp GetIconBank
 
-+LoadPartyMenuMonIconDVs:
-+	push hl
-+	push de
-+	push bc
-+	push af
-+
-+	ld a, [wPartyCount]
-+	sub c
-+	ld [wCurPartyMon], a
-+	ld e, a
-+	ld d, 0
-+
-+	ld hl, wPartySpecies
-+	add hl, de
-+	ld a, [hl]
-+	ld [wCurPartySpecies], a
-+	ld a, MON_DVS
-+	call GetPartyParamLocation
-+	push af
-+	ld a, [wCurPartyMon]
-+	swap a
-+	ld d, 0
-+	ld e, a
-+	add hl, de
-+	pop af
-+	jr _FinishMenuMonIconDVs
-+
-+_FinishMenuMonIconDVs:
-+	pop af
-+	pop bc
-+	pop de
-+	pop hl
-+	ret
+LoadPartyMenuMonIconDVs:
+	push hl
+	push de
+	push bc
+	push af
+
+	ld a, [wPartyCount]
+	sub c
+	ld [wCurPartyMon], a
+	ld e, a
+	ld d, 0
+
+	ld hl, wPartySpecies
+	add hl, de
+	ld a, [hl]
+	ld [wCurPartySpecies], a
+	ld a, MON_DVS
+	call GetPartyParamLocation
+	push af
+	ld a, [wCurPartyMon]
+	swap a
+	ld d, 0
+	ld e, a
+	add hl, de
+	pop af
+	jr _FinishMenuMonIconDVs
+
+_FinishMenuMonIconDVs:
+	pop af
+	pop bc
+	pop de
+	pop hl
+	ret
 
 LoadMenuMonIcon:
 	push hl
@@ -228,11 +228,11 @@ InitPartyMenuIcon:
 	push hl
 	call ReadMonMenuIcon
 	ld [wCurIcon], a
-+	pop hl
-+	ld a, MON_DVS
-+	call GetPartyParamLocation
-+	ld e, l
-+	ld d, h
+	pop hl
+	ld a, MON_DVS
+	call GetPartyParamLocation
+	ld e, l
+	ld d, h
 	call GetMemIconGFX
 	ldh a, [hObjectStructIndexBuffer]
 ; y coord
@@ -300,8 +300,8 @@ NamingScreen_InitAnimatedMonIcon:
 	ret
 
 MoveList_InitAnimatedMonIcon:
-+	ld a, MON_DVS
-+	call GetPartyParamLocation
+	ld a, MON_DVS
+	call GetPartyParamLocation
 	ld hl, wTempMonDVs
 	ld a, [wTempIconSpecies]
 	push hl
@@ -339,8 +339,8 @@ GetSpeciesIcon:
 	ld [wCurIcon], a
 	pop de
 	ld a, e
-+	ld e, l
-+	ld d, h
+	ld e, l
+	ld d, h
 	call GetIconGFX
 	ret
 
@@ -410,25 +410,25 @@ endr
 ; size, so the pointer table is somewhat redundant.
 	push hl
 	ld a, [wCurIcon]
-+	cp ICON_UNOWN
-+	jr nz, .not_unown
-+	ld l, e
-+	ld h, d
-+	predef GetUnownLetter
-+	ld a, [wUnownLetter]
-+	ld l, a
-+	ld h, 0
-+	add hl, hl
-+	ld de, UnownIconPointers
-+	add hl, de
-+	ld a, [hli]
-+	ld e, a
-+	ld d, [hl]
-+	lb bc, BANK("Unown Icons"), 8
-+	pop hl
-+	jr .continue
-+
-+.not_unown
+	cp ICON_UNOWN
+	jr nz, .not_unown
+	ld l, e
+	ld h, d
+	predef GetUnownLetter
+	ld a, [wUnownLetter]
+	ld l, a
+	ld h, 0
+	add hl, hl
+	ld de, UnownIconPointers
+	add hl, de
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
+	lb bc, BANK("Unown Icons"), 8
+	pop hl
+	jr .continue
+
+.not_unown
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -440,19 +440,19 @@ endr
 	pop hl
 
 	call GetIconBank
-+.continue
+.continue
 	call GetGFXUnlessMobile
 
 	pop hl
 	ret
 
-+GetIconBank:
-+	ld a, [wCurIcon]
-+	cp ICON_MAGIKARP ; first icon in Icons2
-+	lb bc, BANK("Mon Icons 1"), 8
-+	ret c
-+	ld b, BANK("Mon Icons 2")
-+	ret
+GetIconBank:
+	ld a, [wCurIcon]
+	cp ICON_MAGIKARP ; first icon in Icons2
+	lb bc, BANK("Mon Icons 1"), 8
+	ret c
+	ld b, BANK("Mon Icons 2")
+	ret
 
 GetGFXUnlessMobile:
 	ld a, [wLinkMode]
