@@ -218,7 +218,7 @@ IconPointers:
 	dw SneaselIcon
 	dw TeddiursaIcon
 	dw UrsaringIcon
-	dw SlugmaIcon
+	dw KurstrawIcon
 	dw MagcargoIcon
 	dw SwinubIcon
 	dw PiloswineIcon
@@ -234,7 +234,7 @@ IconPointers:
 	dw PhanpyIcon
 	dw DonphanIcon
 	dw Porygon2Icon
-	dw StantlerIcon
+	dw ChixIcon
 	dw SmeargleIcon
 	dw TyrogueIcon
 	dw HitmontopIcon
