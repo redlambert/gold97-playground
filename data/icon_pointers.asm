@@ -170,8 +170,8 @@ IconPointers:
 	dw SpinarakIcon
 	dw AriadosIcon
 	dw CrobatIcon
-	dw ChinchouIcon
-	dw LanturnIcon
+	dw KotoraIcon
+	dw RaitoraIcon
 	dw PichuIcon
 	dw CleffaIcon
 	dw IgglybuffIcon
@@ -216,7 +216,7 @@ IconPointers:
 	dw ShuckleIcon
 	dw HeracrossIcon
 	dw SneaselIcon
-	dw TeddiursaIcon
+	dw NyanyaIcon
 	dw UrsaringIcon
 	dw KurstrawIcon
 	dw MagcargoIcon
