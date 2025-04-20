@@ -158,11 +158,11 @@ IconPointers:
 	dw CyndaquilIcon
 	dw QuilavaIcon
 	dw TyphlosionIcon
-	dw TotodileIcon
-	dw CroconawIcon
+	dw CruizeIcon
+	dw AqualloIcon
 	dw FeraligatrIcon
-	dw SentretIcon
-	dw FurretIcon
+	dw TangtripIcon
+	dw TangrowthIcon
 	dw HoothootIcon
 	dw NoctowlIcon
 	dw LedybaIcon
