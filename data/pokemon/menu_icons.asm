@@ -213,12 +213,12 @@ MonMenuIcons:
 	db ICON_QUAGSIRE        ; QUAGSIRE
 	db ICON_QWILFISH         ; PRAXE
 	db ICON_SCIZOR         ; SCIZOR
-	db ICON_SHUCKLE         ; RINRING
+	db ICON_RINRING         ; RINRING
 	db ICON_HERACROSS         ; BELLRUN
 	db ICON_SNEASEL         ; SNEASEL
 	db ICON_QWILFISH        ; QWILFISH
 	db ICON_QWILFISH        ; NUMBPUFF
-	db ICON_MEOWTH         ; NYANYA
+	db ICON_NYANYA         ; NYANYA
 	db ICON_MAGCARGO        ; MADAME
 	db ICON_KURSTRAW       ; KURSTRAW
 	db ICON_GENGAR       ; PANGSHI
@@ -242,7 +242,7 @@ MonMenuIcons:
 	db ICON_ELEKID  ; ELEBABE
 	db ICON_MAGBY  ; MAGBY
 	db ICON_CHIX        ; CHIX actually chix
-	db ICON_DODUO      ; MILTANK actually chix
+	db ICON_MILTANK      ; MILTANK actually chix
 	db ICON_RAIKOU         ; RAIKOU
 	db ICON_ENTEI         ; ENTEI
 	db ICON_SUICUNE         ; SUICUNE
