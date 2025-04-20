@@ -170,8 +170,8 @@ MonMenuIcons:
 	db ICON_SPINARAK         ; SPINARAK
 	db ICON_ARIADOS         ; TUHEAD
 	db ICON_CROBAT         ; CROBAT
-	db ICON_CHINCHOU         ; KOTORA
-	db ICON_LANTURN         ; RAITORA
+	db ICON_KOTORA         ; KOTORA
+	db ICON_RAITORA         ; RAITORA
 	db ICON_PICHU     ; PICHU
 	db ICON_CLEFFA    ; CLEFFA
 	db ICON_IGGLYBUFF  ; IGGLYBUFF
@@ -218,9 +218,9 @@ MonMenuIcons:
 	db ICON_SNEASEL         ; SNEASEL
 	db ICON_QWILFISH        ; QWILFISH
 	db ICON_QWILFISH        ; NUMBPUFF
-	db ICON_SLUGMA         ; NYANYA
+	db ICON_MEOWTH         ; NYANYA
 	db ICON_MAGCARGO        ; MADAME
-	db ICON_GENGAR       ; KURSTRAW
+	db ICON_KURSTRAW       ; KURSTRAW
 	db ICON_GENGAR       ; PANGSHI
 	db ICON_CORSOLA         ; PUDDIPUP
 	db ICON_REMORAID        ; REMORAID
@@ -241,7 +241,7 @@ MonMenuIcons:
 	db ICON_SMOOCHUM  ; SMOOCHUM
 	db ICON_ELEKID  ; ELEBABE
 	db ICON_MAGBY  ; MAGBY
-	db ICON_DODUO        ; CHIX actually chix
+	db ICON_CHIX        ; CHIX actually chix
 	db ICON_DODUO      ; MILTANK actually chix
 	db ICON_RAIKOU         ; RAIKOU
 	db ICON_ENTEI         ; ENTEI
