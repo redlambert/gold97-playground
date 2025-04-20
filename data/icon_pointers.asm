@@ -206,7 +206,7 @@ IconPointers:
 	dw GirafarigIcon
 	dw PinecoIcon
 	dw ForretressIcon
-	dw DunsparceIcon
+	dw ParamiteIcon
 	dw GligarIcon
 	dw SteelixIcon
 	dw SnubbullIcon
